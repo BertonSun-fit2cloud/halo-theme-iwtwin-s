@@ -78,3 +78,111 @@ aside:
       label: 标签显示数量
       type: number
       default: 100
+
+
+# 其它
+others:
+  label: 其它
+  items:
+    enable_clean_mode:
+      name: enable_clean_mode
+      label: 绿色模式
+      type: switch
+      data-type: bool
+      default: false
+      description: "启用后，全局评论、留言、特效和广告位将会屏蔽（通常在网站备案期间开启）"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    check_baidu_collect:
+      name: check_baidu_collect
+      label: 检查百度收录情况
+      type: switch
+      data-type: bool
+      default: false
+      description: "启用后，文章页打开时会自动检测百度收录情况，并显示状态文字（目前相关api为M酷自己搭建的服务，不能保证稳定性）"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    baidu_token:
+      name: baidu_token
+      label: 百度推送Token
+      default: ""
+      placeholder: "请填入token"
+      description: "文章页未收录时会自动将当前链接推送给百度加快收录，Token在百度收录平台注册账号获取（必须启用“检查百度收录”并填入token才生效），https://ziyuan.baidu.com/linksubmit"
+    # enable_pjax:
+    #   name: enable_pjax
+    #   label: 全局Pjax
+    #   type: switch
+    #   data-type: bool
+    #   default: false
+    #   description: "启用全局 pjax 以优化用户体验（开启音乐播放器后建议开启）"
+    #   options:
+    #     - value: true
+    #       label: 开启
+    #     - value: false
+    #       label: 关闭
+    enable_cdn:
+      name: enable_cdn
+      label: 使用CDN加载静态资源
+      type: switch
+      data-type: bool
+      default: true
+      description: "开启后将使用jsDelivr提供的CDN服务加载静态资源，开发环境下强制从本地加载（注意：如果你在后台修改了模板中的样式等文件，需要关掉这里才会读取最新的文件）"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    enable_console_theme:
+      name: enable_console_theme
+      label: 控制台输出主题信息
+      type: switch
+      data-type: bool
+      default: false
+      description: "是否在控制台输出主题相关信息"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    show_loaded_time:
+      name: show_loaded_time
+      label: 控制台输出页面加载耗时
+      type: switch
+      data-type: bool
+      default: false
+      description: "是否在控制台输出当前页面加载耗时"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    # enable_backup:
+    #   name: enable_backup
+    #   label: 博客自动备份
+    #   type: switch
+    #   data-type: bool
+    #   default: true
+    #   description: "开启后，系统将每隔5天备份1次，最多备份版本为20份，超过后自动删除最晚的版本，此功能需要先配置相应服务端程序，请戳 xxxxx"
+    #   options:
+    #     - value: true
+    #       label: 开启
+    #     - value: false
+    #       label: 关闭
+    rip_mode:
+      name: rip_mode
+      label: RIP模式(灰色模式)
+      type: switch
+      data-type: bool
+      default: false
+      description: "向生命致敬，愿精神长存 <愿此功能永不被启用>"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
