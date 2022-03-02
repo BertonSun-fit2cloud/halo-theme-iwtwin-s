@@ -56,6 +56,11 @@ aside:
       label: 分类2(卡片样式)
       type: text
       placeholder: '存在的分类slug,不填不展示'
+    third_aside:
+      name: second_aside
+      label: 分类3(卡片样式)
+      type: text
+      placeholder: '存在的分类slug,不填不展示'
     show_tag:
       name: show_tag
       label: 标签
