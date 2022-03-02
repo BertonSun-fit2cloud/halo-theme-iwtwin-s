@@ -52,6 +52,32 @@
                         </@postTag>
                 </div>
             </#if>
+            
+            <!--侧边栏分类3-->
+            <#if settings.second_aside?? && settings.second_aside != ''>
+                <div id="wpcom-post-thumb-3" class="widget widget_post_thumb">
+                        <@postTag method="listByCategorySlug" categorySlug="${settings.second_aside!}">
+                            <ul style="margin-bottom:20px;">
+                                <#list posts?sort_by("createTime")?reverse as post>
+                                <#if post_index lt 6>
+                                    <li class="item">
+                                        <div class="item-img">
+                                                <a class="item-img-inner" href="${post.fullPath!}" title="${post.title!}">
+                                                <img width="480" height="300" src="${theme_base!}/source/images/lazy.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="${post.title!}" data-original="${post.thumbnail!}"></a>
+                                        </div>
+                                        <div class="item-content">
+                                            <p class="item-title"><a href="${post.fullPath!}" title="${post.title!}">${post.title!}</a></p>
+                                            <p class="item-date">${post.createTime?date}</p>
+                                        </div>
+                                    </li>
+                                </#if>
+                                </#list>
+                                <li class="pull-right"><a href="${blog_url!}/categories/${settings.second_aside!}">查看更多</a></li>
+                            </ul>
+                        </@postTag>
+                </div>
+            </#if>
+            
             <!--标签1-->
             <#if settings.show_tag!true>
             <div id="tag_cloud-2" class="widget widget_tag_cloud"><h3 class="widget-title">标签</h3>
